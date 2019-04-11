@@ -1,7 +1,7 @@
 const express = require("express");    
 const favicon = require('serve-favicon');
 const app= express();
-const port= 5000;
+const port= process.env.PORT || 5000;
 var xmlBody = require('./kookoo.js');
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.get('/', function(req, res){
